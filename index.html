@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Prism.js CSS for syntax highlighting -->
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet" />
+    <!-- Add Prism.js JavaScript for syntax highlighting -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-c.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-cpp.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-java.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Basic Operations on Data Structures</h1>
+        <label for="language">Select Language:</label>
+        <select id="language" onchange="updateCode()">
+            <option value="" selected></option>
+            <option value="c">C</option>
+            <option value="cpp">C++</option>
+            <option value="java">Java</option>
+        </select>
+
+        <label for="operation">Select Operation:</label>
+        <select id="operation" onchange="updateCode()">
+            <option value="" selected></option>
+            <option value="stack">Stack</option>
+            <option value="queue">Queue</option>
+            <option value="linkedlist">Linked List</option>
+            <option value="tree">Tree</option>
+        </select>
+
+        <!-- Update the pre tag to use the appropriate Prism language class -->
+        <pre id="code-display" class="language-c"></pre>
+
+        <a href="pracindex.html"><button class="practice-btn">Let's Practice</button></a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
